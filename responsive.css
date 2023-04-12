@@ -8,9 +8,55 @@
         font-size: 56%;
     }
 }
-@media screen and (max-width:1020px){
+@media screen and (max-width:1024px){
     html{
         font-size: 53%;
+    }
+    .hidden-nav-search-group{
+        display: contents;
+        width: 97%;
+        margin:  auto;
+        display: flex;
+        border-radius: .7rem;
+    }
+    .nav-search-group{
+        display: none;
+    }
+    .nav-categories{
+        display: none;
+    }
+    .top-navbar{
+        padding-bottom: 1rem;
+    }
+    .sbc-content-right{
+        display: none;
+    }
+    .sbc-content-left{
+        width: 90%;
+        margin: auto;
+    }
+    .sc-content-wrapper {
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+    }
+    
+    .sc-content-wrapper a {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2.5rem;
+    
+    }
+    .nfy-content-wrapper {
+        width: 85%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .nfy-content-wrapper a {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -18,6 +64,56 @@
     html{
         font-size: 50%;
     }
+    .sbg-content-wrapper {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .sbg-content-wrapper a{
+        width: 90%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    }
+    .rivah-banner{
+        width: 70%;
+        flex-direction: column;
+    
+    }
+    .rivah-img{
+        width: 100%;
+        margin: auto;
+    }
+    .contact-section{
+        display: none;
+    }
+    .jg-content-wrapper {
+        width: 90%;
+        flex-direction: column;
+    }
+    
+    .jg-img {
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+    .jg-content-wrapper .jg-title{
+        font-size: 4rem;
+    }
+    /* .sbg-content-wrapper a:nth-child(1){
+        width: 90%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    }
+    .sbg-content-wrapper a:nth-child(2){
+        width: 48%;
+    margin-bottom: 2.5rem;
+    }
+    .sbg-content-wrapper a:nth-child(3) {
+        width: 48%;
+    margin-bottom: 2.5rem;
+    float: right;
+    } */
 }
 @media screen and (max-width:920px){
     html{
