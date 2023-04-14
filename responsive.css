@@ -175,6 +175,9 @@
         -ms-transform: translate(-50%, -50%);
         padding: 1rem 1rem;
     }
+    .single-product-container{
+        margin-top: 13rem;
+    }
 }
 
 @media screen and (max-width:991px) {
@@ -397,7 +400,122 @@
     .sbc-content-left {
         width: 100%;
     }
-    
+    .product-desc-wrapper{
+        flex-direction: column;
+    }
+    .product-desc-left .path{
+        display: none;
+    }
+    .product-left-innerleft{
+        display: none;
+    }
+    .single-product-container{
+        margin-top: 13rem;
+    }
+    .product-left-img-wrapper{
+        flex-direction: column;
+    }
+    .img-move-icon{
+        display: none;
+    }
+    .product-left-innerright{
+        width: 100%;
+    }
+    .product-desc-left{
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .product-desc-right{
+        width: 90%;
+        margin: 1rem auto;
+        flex-direction: column;
+    }
+    .qty-wrapper{
+        width: 100%;
+        /* border: 1px solid salmon; */
+        margin-top: 4.5rem;
+    }
+    .qty-content div:nth-child(3){
+        display: none;
+    }
+    .bg-gray{
+        background-color: #fff;
+        color: black;
+    }
+    .qty-content{
+        border: 1px solid black;
+        padding: 1rem;
+    }
+    .p-related-text{
+        font-size: 1.5rem;
+    }
+    .sp-buttons{
+        display: none;
+    }
+    .product-desc-right-innerleft{
+        width: 100%;
+        margin: auto;
+    }
+    .address-section{
+        flex-direction: column;
+    }
+    .select-country{
+        width: 100%;
+        padding: 1.4rem;
+        margin-bottom: 2rem;
+    }
+    .select-country select{
+        width: 100%;
+    }
+    .pincode-check{
+        width: 100%;
+        padding: .8rem;
+    }
+    .product-desc-right-innerright{
+        display: none;
+    }
+    .product-guide{
+        display: none;
+    }
+    .product-details-section{
+        flex-direction: column;
+    }
+    .product-details{
+        width: 80%;
+        margin: auto;
+    }
+    .p-d-feature-name{
+        font-size: 1.6rem;
+    }
+    .p-d-feature{
+        font-size: 1.4rem;
+    }
+    .product-detail-img{
+        width: 100%;
+    }
+    .review-inDetail-content{
+        width: 100%;
+        margin: 1rem auto;
+        /* border: 1px solid black; */
+        text-align: left;
+    }
+.review-inDetail{
+    width: 70%;
+    /* border: 1px solid black; */
+}
+.product-story{
+    width: 70%;
+}
+.more-info{
+    width: 70%;
+}
+.p-buying-guides{
+    width: 70%;
+}
+.p-r-btn{
+    width: 49%;
+}
+
 }
 @media screen and (max-width:767px) {
     html {
