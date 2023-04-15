@@ -438,11 +438,12 @@ a {
 
 .sbc-explorer {
     padding-bottom: .8rem;
-    font-size: 1.3rem;
+    font-size: .8rem;
     text-align: center;
     text-transform: capitalize;
     color: gray;
     margin-bottom: 1rem;
+    font-weight: normal;
 }
 
 .sbc-explorer i {
@@ -1384,6 +1385,7 @@ a {
     justify-content: space-between;
     border: .1rem solid #832729;
     text-align: center;
+    border-radius: 2rem;
 }
 
 .left-login-content {
@@ -1396,6 +1398,7 @@ a {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 3rem;
+    color: #832729;
 }
 
 .right-login-img {
@@ -1459,7 +1462,9 @@ select {
     font-size: 1.2rem;
 
 }
-
+.password-content-wrapper{
+    width: 100%;
+}
 .password-content {
     width: 80%;
     margin: 1rem auto;
@@ -1993,14 +1998,16 @@ div:nth-child(3) {
 .s-p-banner-img img {
     width: 100%;
 }
-
+.s-p-p-details{
+    width: 100%;
+}
 .product-details-section {
-    width: 85%;
+    width: 80%;
     margin: auto;
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
 }
 
 .product-details {
@@ -2065,7 +2072,9 @@ div:nth-child(3) {
     display: flex;
     margin-bottom: 1.3rem;
 }
-
+.p-d-item:nth-child(4){
+    margin-top: 1.5rem;
+}
 .p-d-feature-name {
     font-size: 1.3rem;
     font-weight: bold;
@@ -2344,14 +2353,14 @@ div:nth-child(3) {
 
 }
 
-.cart-login-section span:nth-child(1),
+/* .cart-login-section span:nth-child(1),
 span:nth-child(3) {
     text-transform: capitalize;
     color: #832729;
     font-weight: 700;
     margin: 0 .3rem;
     border-bottom: 1px solid #832729;
-}
+} */
 
 .cart-login-section span:nth-child(5) {
     margin: 0 .3rem;
@@ -2492,7 +2501,7 @@ div:nth-child(3) {
     display: flex;
     justify-content: space-between;
 }
-.cart-product-qty span:nth-child(1), span:nth-child(3){
+/* .cart-product-qty span:nth-child(1), span:nth-child(3){
     background-color: lightgray;
     color: white;
     padding: 1rem;
@@ -2500,7 +2509,7 @@ div:nth-child(3) {
     border-radius: 100%;
     font-size: 1.2rem;
     cursor: pointer;
-}
+} */
 .cart-product-qty span:nth-child(1):hover{
     background-color: #832729;
 }
