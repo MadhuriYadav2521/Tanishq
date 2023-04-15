@@ -515,6 +515,15 @@
 .p-r-btn{
     width: 49%;
 }
+.cart-wrapper{
+    flex-direction: column-reverse;
+}
+.cart-left{
+    width: 100%;
+}
+.cart-right{
+    width: 100%;
+}
 
 }
 @media screen and (max-width:767px) {
