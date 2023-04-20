@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,50 +11,43 @@
     <link rel="stylesheet" href="./responsive.css">
     <script src="https://kit.fontawesome.com/8cfedbae53.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="screen">
-            <div class="login-content-wrapper">
-                <div class="left-login-content">
-                    <h1>Login Or Signup</h1>
-                    <div class="form-content">
-                        <form action="">
-                            <div class="f-content-field">
-                                <fieldset>
-                                    <legend>Code</legend>
-                                    <select name="" id="">
-                                        <option value="" selected>+91</option>
-                                        <option value="">+61</option>
-                                        <option value="">+973</option>
-                                        <option value="">+49</option>
-                                    </select>
-                                </fieldset>
-                                <input type="tel" placeholder="Enter Mobile Number" class="ent-num"><br>
-                            </div>
-                            <div class="email-info">
-                                <input type="email" placeholder="Enter Email">
-                            </div>
-                            <div class="password-content-wrapper">
-                                <div class="password-content">
-                                    <input type="password" placeholder="Enter password">
-                                </div>
-                            </div>
-                            <div class="remember-me">
-                                <input type="checkbox">
-                                <span>Remember Me</span>
-                            </div>
-                            <p class="terms-policy">By continuing, I agree to <span class="highlight">Terms of Use</span> &
-                                <span class="highlight">Privacy Policy</span> </p>
-                            <button class="r-otp-btn">Request OTP</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="right-login-img">
-                    <div class="right-login-image">
-                        <img src="./img/login.avif" alt="">
-                    </div>
+        <div class="login-content-wrapper">
+            <div class="left-login-content">
+                <h1>Login</h1>
+                <div class="form-content">
+                    <form action="" onsubmit="login(event)">
+
+                        <div class="email-info">
+                            <input type="email" id="userEmail" placeholder="Enter Your Email">
+                        </div>
+                        <div class="password-content">
+                            <input type="password" id="userPassword" placeholder="Enter Your password">
+                        </div>
+                        <!-- <div class="remember-me">
+                            <input type="checkbox">
+                            <span>Remember Me</span>
+                        </div> -->
+                        <p class="terms-policy">By continuing, I agree to <span class="highlight">Terms of Use</span> &
+                            <span class="highlight">Privacy Policy</span>
+                        </p>
+                        <input type="submit" value="Login" class="r-otp-btn">
+                    </form>
                 </div>
             </div>
+            <div class="right-login-img">
+                <div class="right-login-image">
+                    <img src="./img/login.avif" alt="">
+                </div>
+            </div>
+        </div>
+
     
     </div>
+
+    <script src="./main.js"></script>
 </body>
+
 </html>
