@@ -14,40 +14,40 @@
 
 <body>
     <div class="screen">
-        <div class="login-content-wrapper">
-            <div class="left-login-content">
-                <h1>Login</h1>
-                <div class="form-content">
-                    <form action="" onsubmit="login(event)">
+        <div class="register-container">
+            <div class="left-register-content">
+                <div class="login-title">Login</div>
 
-                        <div class="email-info">
-                            <input type="email" id="userEmail" placeholder="Enter Your Email"autocomplete="off">
-                        </div>
-                        <div class="password-content">
-                            <input type="password" id="userPassword" placeholder="Enter Your password"autocomplete="off">
-                        </div>
-                        <!-- <div class="remember-me">
-                            <input type="checkbox">
-                            <span>Remember Me</span>
-                        </div> -->
-                        <p class="terms-policy">By continuing, I agree to <span class="highlight">Terms of Use</span> &
-                            <span class="highlight">Privacy Policy</span>
-                        </p>
-                        <input type="submit" value="Login" class="r-otp-btn">
-                    </form>
-                </div>
+                <form action="" onsubmit="login(event)">
+                    <div class="input_wrap">
+                        <input type="email" id="userEmail" required autocomplete="off" />
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input type="password" id="userPassword" required  autocomplete="off"/>
+                        <label>Enter your password</label>
+                    </div>
+                    <input type="checkbox" name="" id="checkbox" >
+                    <label for="">Remember Me</label>
+
+                    <p class="form-t-and-c">By continuing, I agree to <span class="t-c-style">Terms of Use</span> & <span class="t-c-style">Privacy Policy</span></p>
+                    <div class="sign-up-btn">
+                    <input type="submit" value="Login">
+                        
+                    </div>
+                
+                </form>
+
             </div>
-            <div class="right-login-img">
-                <div class="right-login-image">
-                    <img src="./img/login.avif" alt="">
-                </div>
+            <div class="right-register-content">
+                <img src="./img/north-indian-jewellery-sets-1024x768.jpg" alt="">
             </div>
         </div>
-
-    
     </div>
 
     <script src="./main.js"></script>
+
+
 </body>
 
 </html>

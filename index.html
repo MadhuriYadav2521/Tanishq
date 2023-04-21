@@ -52,11 +52,11 @@
                             </a>
                         </div>
                         <div class="menu">
-                            <a href="./login.html">
+                            <a href="./signup.html">
                                 <div class="menu-img">
                                     <img src="./img/user.svg" alt="">
                                 </div>
-                                <div class="menu-title">account</div>
+                                <div class="menu-title" id="switch">account</div>
                             </a>
                         </div>
                         <div class="menu">
@@ -658,6 +658,29 @@
 
         </footer>
     </div>
+
+
+
+    <script>
+        window.onload = function(){
+            // alert("working")
+            var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
+            // console.log(currentUser,"currentUser");
+            if(!!currentUser){
+                // alert(currentUser.namee)
+                var divFromHtml = document.getElementById("switch");
+                // console.log(divFromHtml,"divFromHtml");
+                // var h1 = document.createElement("h1");
+                // h1.innerText = "madhuri"
+                // divFromHtml.append(h1)
+                var name = `<p> ${currentUser.namee}</p>`;
+                divFromHtml.innerHTML = name;
+            }else{
+                alert("current user absent")
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

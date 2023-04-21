@@ -5,57 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanishq – Online Gold & Diamond Jewellery Shopping Store India</title>
-    <link rel="shortcut icon" href="https://www.tanishq.co.in/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/responsive-design.css">
-    <script src="https://kit.fontawesome.com/174a9c1444.js" crossorigin="anonymous"></script>
+    <title>Tanishq-Online Gold & Diamond Jwellery Shopping Store in India</title>
+    <link rel="icon" type="image/x-icon" href="https://www.tanishq.co.in/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="https://kit.fontawesome.com/8cfedbae53.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="screen">
+        <div class="register-container">
+            <div class="left-register-content">
+                <div class="login-title"> Sign Up </div>
 
-    <div class="register-screen">
-        <div class="login-content-wrapper">
-            <div class="left-login-content">
-                <h1>Sign Up</h1>
+                <form action="" onsubmit="register(event)">
+                    <div class="input_wrap">
+                        <input type="text" id="userName" required  autocomplete="off"/>
+                        <label>Enter your name</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input type="email" id="userEmail" required autocomplete="off" />
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input type="password" id="userPassword" required  autocomplete="off"/>
+                        <label>Enter your password</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input type="password"  id="userConfirmPassword" required  autocomplete="off"/>
+                        <label>Confirm password</label>
+                    </div>
+                    <input type="checkbox" name="" id="checkbox" >
+                    <label for="">Remember Me</label>
 
-                <div class="form-content">
-                    <form action="" onsubmit="register(event)">
-                        <div class="f-content-field">
-                            <input type="text" id="userName" placeholder="Enter Your Name" class="ent-num" autocomplete="off"><br>
-                        </div>
-                        <div class="email-info">
-                            <input type="email" id="userEmail" placeholder="Enter Your Email"autocomplete="off">
-                        </div>
-                        <div class="password-content">
-                            <input type="password" id="userPassword" placeholder="Enter Your password"autocomplete="off">
-                        </div>
-                        <div class="password-content">
-                            <input type="password" id="userConfirmPassword" placeholder="Comfirm Password"autocomplete="off">
-                        </div>
-                        <div class="remember-me">
-                            <input type="checkbox">
-                            <span>Remember Me</span>
-                        </div>
-                        <p class="terms-policy">By continuing, I agree to <span class="highlight">Terms of Use</span> &
-                            <span class="highlight">Privacy Policy</span>
-                        </p>
-                        <input type="submit" value="Sign Up" class="r-otp-btn">
-                    </form>
-                    
-                </div>
+                    <p class="form-t-and-c">By continuing, I agree to <span class="t-c-style">Terms of Use</span> & <span class="t-c-style">Privacy Policy</span></p>
+                    <div class="sign-up-btn">
+                    <input type="submit" value="Sign Up">
+                        
+                    </div>
+                
+                </form>
+
             </div>
-            <!-- <div class="right-login-img">
-                <div class="right-login-image">
-                    <img src="./images/login.jpg" alt="">
-                </div>
-            </div> -->
+            <div class="right-register-content">
+                <img src="./img/north-indian-jewellery-sets-1024x768.jpg" alt="">
+            </div>
         </div>
-
     </div>
 
-
     <script src="./main.js"></script>
+
+
 </body>
 
 </html>
