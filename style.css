@@ -372,7 +372,10 @@ a {
     font-family: Nunito Sans, sans-serif;
     line-height: 6rem;
 }
-
+.shop-by-category.container-subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
 .container-subtitle {
     font-size: 1.5rem;
 }
@@ -452,17 +455,51 @@ a {
 
 .sbc-explorer {
     padding-bottom: .8rem;
-    font-size: .8rem;
-    text-align: center;
+    font-size: 1.3rem;
+    /* text-align: center; */
     text-transform: capitalize;
-    color: gray;
+    color: black;
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+}
+a:hover .sbc-explorer{
+    width: 90%;
+    padding-bottom: .8rem;
+    font-size: 1.3rem;
+    /* text-align: center; */
+    text-transform: capitalize;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    display: flex;
+    justify-content:space-between;
+    transition: .5s ease-out;
+    padding: 0 1rem;
 }
 
+/* .shop-by-collection .sbc-explorer {
+    padding-bottom: .8rem;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: normal;
+} */
 .sbc-explorer i {
     font-size: 1rem;
     margin-left: .4rem;
+}
+.sg-sbc-explorer{
+    padding-bottom: .8rem;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    /* margin-bottom: 1rem; */
+    font-weight: normal;
 }
 
 /* shop-by-collection */
@@ -485,7 +522,9 @@ a {
     border-radius: .4rem;
 
 }
-
+.shop-by-collection .sc-content:hover .sbc-name{
+    display: none;
+}
 .sc-text {
     width: 100%;
     display: flex;
@@ -1844,8 +1883,7 @@ a {
     text-align: center;
 }
 
-.qty-content div:nth-child(2),
-div:nth-child(3) {
+.qty-num {
     font-size: 1.7rem;
     font-weight: bold;
 }
@@ -1916,7 +1954,9 @@ div:nth-child(3) {
     border-radius: .5rem;
     padding: 1rem;
 }
-
+.select-country select{
+    border: none;
+}
 .pincode-check {
     width: 54%;
     display: flex;
@@ -1927,18 +1967,23 @@ div:nth-child(3) {
 }
 
 .pincode-check input {
+    width: 70%;
     font-size: 1.3rem;
     padding: .7rem 0 .7rem .7rem;
     border: none;
     outline: none;
+    /* border: 1px solid black; */
 }
 
 .check {
+    width: 29%;
     font-size: 1.3rem;
     color: #A86769;
     cursor: pointer;
+    padding: .7rem 0;
     text-transform: uppercase;
-    padding-right: .4rem;
+    /* padding-right: .4rem; */
+    /* border: 1px solid black; */
 }
 
 .product-services {
@@ -2335,7 +2380,11 @@ div:nth-child(3) {
     display: none;
 
 }
-
+.cart-bold{
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0 .3rem;
+}
 .s-p-products-wrapper .p-name {
     font-weight: normal;
     margin-top: 2rem;
@@ -2356,6 +2405,7 @@ div:nth-child(3) {
 .cart-container {
     width: 85%;
     margin: 1rem auto;
+    /* border: 1px solid orange; */
 }
 
 .cart-login-section {
@@ -2382,6 +2432,7 @@ span:nth-child(3) {
 .cart-login-section span:nth-child(5) {
     margin: 0 .3rem;
     color: #832729;
+    font-weight: bold;
 }
 
 .cart-wrapper {
@@ -2453,8 +2504,7 @@ span:nth-child(3) {
     /* border: 1px solid black; */
 }
 
-.cart-price-section div:nth-child(2),
-div:nth-child(3) {
+.c-real-price {
     font-size: 2rem;
     font-weight: 700;
     margin: 0 .3rem;
@@ -2518,17 +2568,20 @@ div:nth-child(3) {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
-/* .cart-product-qty span:nth-child(1), span:nth-child(3){
+.product-qty{
+    font-size: 1.5rem;
+}
+.product-set-qty{
     background-color: lightgray;
     color: white;
     padding: 1rem;
     border: none;
     border-radius: 100%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-} */
+}
 .cart-product-qty span:nth-child(1):hover {
     background-color: #832729;
 }
@@ -2558,10 +2611,22 @@ div:nth-child(3) {
 }
 
 .c-select-country {
-    width: 20%;
+    width: 27%;
 
 }
-
+.c-select-country legend{
+    font-size: 1.1rem;
+}
+.c-select-country fieldset{
+    border: .1rem solid lightgray;
+}
+.c-select-country select{
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 1.5rem 0;
+}
 .cart-pincode-check {
     width: 70%;
     border: 1px solid lightgray;
@@ -2571,7 +2636,10 @@ div:nth-child(3) {
     padding: 1.2rem .5rem;
     border-radius: .5rem;
 }
-
+.cart-pincode-check input{
+    outline: none;
+    border: none;
+}
 .cart-billing-details {
     width: 100%;
     padding: 2rem;
@@ -2710,6 +2778,7 @@ div:nth-child(3) {
     font-size: 3rem;
     text-align: center;
     font-weight: 700;
+    color: #832729;
 }
 .input_wrap input[type="text"],
 input[type="email"],
@@ -2803,10 +2872,71 @@ input:checked{
     width: 100%;
     padding: 1rem;
 }
+.fixed-footer-checkout{
+    width: 100%;
+    /* border: 1px solid black; */
+    box-shadow: 0 -10px 10px #7676761a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4rem 7rem;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+}
+.total-price-section{
+    width: 50%;
+    /* border: 1px solid salmon; */
+}
+.total-price-section ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.total-price-section ul li{
+    font-size: 2.2rem;
+    color: #832729;
+    margin: 0 .3rem;
+}
+.bold-price-text{
+    font-weight: 600;
+}
+.checkout-section{
+    width: 50%;
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.continue-shopping-btn{
+    width: auto;
+    border: 1px solid #832729;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #832729;
+    background-color: #fff;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.3rem 0;
+    outline: none;
+    cursor: pointer;
 
-
-
-
+}
+.checkout-btn{
+    width: auto;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+    background-color: #832729;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.3rem 0;
+    outline: none;
+    cursor: pointer;
+}
 
 
 

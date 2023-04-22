@@ -524,6 +524,30 @@
 .cart-right{
     width: 100%;
 }
+.register-container{
+    width: 70%;
+    flex-direction: column;
+}
+.left-register-content{
+    width: 100%;
+    margin: 1rem auto 0 auto;
+}
+.right-register-content{
+    width: 100%;
+    margin: 1rem auto 0 auto;
+
+}
+.total-price-section{
+    display: none;
+}
+.checkout-section{
+    width: 100%;
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 }
 @media screen and (max-width:767px) {
