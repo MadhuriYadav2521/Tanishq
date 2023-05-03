@@ -80,3 +80,43 @@ function login(event){
     }
    
 }
+
+
+window.onload = function(){
+    // alert("working")
+    var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
+    // console.log(currentUser,"currentUser");
+    if(!!currentUser){
+        // alert(currentUser.namee)
+        var divFromHtml = document.getElementById("switch");
+        // console.log(divFromHtml,"divFromHtml");
+        // var h1 = document.createElement("h1");
+        // h1.innerText = "madhuri"
+        // divFromHtml.append(h1)
+        var name = `<p> ${currentUser.namee}</p>`;
+        divFromHtml.innerHTML = name;
+    }else{
+        alert("current user absent")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
