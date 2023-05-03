@@ -565,6 +565,7 @@ a:hover .sbc-explorer{
     margin: auto;
     /* border: 1px solid salmon; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -1168,8 +1169,8 @@ a:hover .sbc-explorer{
 .nav-subcategory {
     width: 100%;
     border-top: 1px solid lightgray;
-    position: sticky;
-    top: 6.6rem;
+    /* position: sticky; */
+    /* top: 6.6rem; */
     background-color: white;
     box-shadow: 0 .4rem .8rem 0 rgba(131, 39, 41, 0.2), 0 .6rem 2rem 0 rgba(131, 39, 41, .19);
     padding: .8rem;
@@ -1233,12 +1234,13 @@ a:hover .sbc-explorer{
 }
 
 .nav-s-img {
-    width: 5%;
+    width: 10%;
     margin-right: .4rem;
+    /* border: 1px solid black; */
 }
 
-.nav-s-img {
-    width: 7%;
+.nav-s-img img {
+    width: 100%;
 }
 
 .nav-s-text {
@@ -1353,7 +1355,7 @@ a:hover .sbc-explorer{
 
 .product-info {
     width: 100%;
-    padding: .5rem;
+    padding: 1rem;
 
 }
 
@@ -1753,16 +1755,19 @@ a:hover .sbc-explorer{
 }
 
 .offerAndprice {
-    width: 50%;
+    width: 58%;
+    /* display: flex;
+    align-items: center;
+    gap: 1rem; */
     /* border: 1px solid black; */
 }
 
 .del-price {
-    width: 30%;
+    width: 40%;
     /* border: 1px solid violet; */
-    font-size: 1.6rem;
-    color: lightgray;
-    font-weight: 700;
+    font-size: 1.2rem;
+    color: gray;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
@@ -1778,12 +1783,12 @@ a:hover .sbc-explorer{
 }
 
 .rupee {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
 }
 
 .total-price {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
 }
 
@@ -1915,6 +1920,7 @@ a:hover .sbc-explorer{
     text-align: center;
     margin-right: 2rem;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 .sp-secondary-btn {
@@ -2374,12 +2380,12 @@ a:hover .sbc-explorer{
     /* border: 1px solid black; */
 }
 
-.s-p-products-wrapper .product-info .hurry,
+/* .s-p-products-wrapper .product-info .hurry,
 .p-path,
 .explorer-btn {
     display: none;
 
-}
+} */
 .cart-bold{
     font-weight: bold;
     text-transform: capitalize;
