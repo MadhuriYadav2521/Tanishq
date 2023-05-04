@@ -51,7 +51,7 @@
                             </a>
                         </div>
                         <div class="menu">
-                            <a href="./login.html">
+                            <a href="./signup.html">
                                 <div class="menu-img">
                                     <img src="./img/user.svg" alt="">
                                 </div>
@@ -73,6 +73,9 @@
                                 </div>
                                 <div class="menu-title">cart</div>
                             </a>
+                        </div>
+                        <div class="menu" id="logout">
+                            
                         </div>
                     </div>
                 </div>
@@ -574,7 +577,38 @@
         </footer>
     </div>
 
-    <script src="./main.js"></script>
+
+    
+    <script>
+        window.onload = function(){
+            // alert("working")
+            var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
+            // console.log(currentUser,"currentUser");
+            if(!!currentUser){
+                // alert(currentUser.namee)
+                var logoutDiv = document.getElementById("logout");
+                var divFromHtml = document.getElementById("switch");
+                // console.log(divFromHtml,"divFromHtml");
+                // var h1 = document.createElement("h1");
+                // h1.innerText = "madhuri"
+                // divFromHtml.append(h1)
+                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <button onclick="logout() ">Logout</button>'
+                var name = `<p> ${currentUser.namee}</p>`;
+                divFromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
+            }
+            // else{
+            //     alert("current user absent")
+            // }
+        }
+        function logout() {
+            alert("We will miss you..")
+            localStorage.removeItem("tanishqCurrentUser");
+            window.location.reload();
+        }
+        
+    </script>
+   
 </body>
 
 </html>

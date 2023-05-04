@@ -154,6 +154,27 @@ a {
     font-weight: 600;
 }
 
+#logout button{
+    background-color: #F2E9E9;
+    color: #832729;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#logout button:hover{
+    font-weight: 600;
+}
+#logout i{
+    font-size: 1.6rem;
+    color: #832729;
+    margin-bottom: .8rem
+    ;
+}
+
+
+
 .nav-categories {
     width: 100%;
     padding: 1.2rem;
@@ -186,6 +207,8 @@ a {
 .nav-category-container li a:hover {
     border-bottom: .2rem solid #832729;
 }
+
+
 
 /* -------------slider--------- */
 
@@ -1343,7 +1366,44 @@ a:hover .sbc-explorer{
     margin-bottom: 4rem;
     /* border: 1px solid black; */
 }
+.mul-products-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    /* border: 1px solid palevioletred; */
+}
 
+.mul-products-wrapper a {
+    width: 24%;
+    border: 1px solid lightgray;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+.mul-products-wrapper a:hover {
+    box-shadow: 0 .4rem .8rem 0 rgba(131, 39, 41, 0.2), 0 .6rem 2rem 0 rgba(131, 39, 41, .19);
+
+}
+.g-pro-name{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    padding: 0 .7rem;
+    color: black;
+}
+.g-pro-price{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding: 0 .7rem;
+    color: black;
+}
+#products a img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
 .products {
     width: 100%;
 }
@@ -3010,10 +3070,63 @@ input:checked{
 }
 
 
+/* -------Add product ------------- */
+.admin-panel-navbar{
+    width: 100%;
+    padding: 1rem 4rem;
+    /* border: 1px solid black; */
+    background-color: #F6E3E1;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-top-menu-wrapper {
+    width: 40%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-top-menu-wrapper .menu-img img{
+    width: 70%;
+}
+.add-product-container{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.add-product-container form{
+    width: 50%;
+    padding: 3rem;
+    /* border: 1px solid black; */
+    margin: 4rem auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.admin-panel-title{
+    text-align: center;
+    font-size: 3rem;
+    color: #832729;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.submit-field{
+    width: 100%;
+    text-align: center;
+}
 
-
-
-
+.admin-panel-btn{
+    width: 30%;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+    background-color: #832729;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.3rem 0;
+    outline: none;
+    cursor: pointer;
+}
 
 
 
