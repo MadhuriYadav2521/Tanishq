@@ -9,7 +9,9 @@
     <link rel="icon" type="image/x-icon" href="https://www.tanishq.co.in/favicon.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -67,12 +69,15 @@
                             </a>
                         </div>
                         <div class="menu">
-                            <a href="">
+                            <a href="./cart.html">
                                 <div class="menu-img">
                                     <img src="./img/cart.svg" alt="">
                                 </div>
                                 <div class="menu-title">cart</div>
                             </a>
+                        </div>
+                        <div class="menu" id="logout">
+
                         </div>
                     </div>
                 </div>
@@ -167,7 +172,7 @@
                             <div class="sbc-explorer">explorer<i class="fa-solid fa-chevron-right"></i></div>
                         </div>
                     </a>
-                    <a href="">
+                    <a href="./mutiple-products.html">
                         <div class="sbc-content">
                             <div class="sbc-img">
                                 <img src="./img/cp2.webp" alt="">
@@ -434,7 +439,8 @@
                             </div>
                             <div class="sc-text">
                                 <div class="sbc-name">men</div>
-                                <div class="sg-sbc-explorer">exlporer more<i class="fa-solid fa-chevron-right"></i></div>
+                                <div class="sg-sbc-explorer">exlporer more<i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -445,7 +451,8 @@
                             </div>
                             <div class="sc-text">
                                 <div class="sbc-name">kids</div>
-                                <div class="sg-sbc-explorer">exlporer more<i class="fa-solid fa-chevron-right"></i></div>
+                                <div class="sg-sbc-explorer">exlporer more<i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -555,15 +562,15 @@
                     <div class="useful-links">
                         <div class="footer-title">
                             <h1 class="jg-title">useful links</h1>
-                            <a  href="" class="footer-plus-icon">+</a>
+                            <a href="" class="footer-plus-icon">+</a>
                         </div>
                         <div class="f-l-item">
                             <a href="">delivery information</a>
-                        <a href="">international shipping</a>
-                        <a href="">payment options</a>
-                        <a href="">track your orders</a>
-                        <a href="">returns</a>
-                        <a href="">find a store</a>
+                            <a href="">international shipping</a>
+                            <a href="">payment options</a>
+                            <a href="">track your orders</a>
+                            <a href="">returns</a>
+                            <a href="">find a store</a>
                         </div>
                     </div>
                     <div class="information">
@@ -573,10 +580,10 @@
                         </div>
                         <div class="f-l-item">
                             <a href="">career</a>
-                        <a href="">blog</a>
-                        <a href="">offers & contest details</a>
-                        <a href="">help & FAQS</a>
-                        <a href="">about tanishq</a>
+                            <a href="">blog</a>
+                            <a href="">offers & contest details</a>
+                            <a href="">help & FAQS</a>
+                            <a href="">about tanishq</a>
                         </div>
 
                     </div>
@@ -587,8 +594,8 @@
                         </div>
                         <div class="f-l-item">
                             <a href="">write to us</a>
-                        <a href="">188-266-0123</a>
-                        <a href="">chat with us</a>
+                            <a href="">188-266-0123</a>
+                            <a href="">chat with us</a>
                         </div>
                     </div>
                     <div class="social-links">
@@ -605,8 +612,8 @@
                             <h1 class="footer-text">follow us on</h1>
                             <div class="sa-img-wrapper">
                                 <div class="sa-img"><img src="./img/instagram.svg" alt=""></div>
-                            <div class="sa-img"><img src="./img/twitter.svg" alt=""></div>
-                            <div class="sa-img"><img src="./img/facebook.svg" alt=""></div>
+                                <div class="sa-img"><img src="./img/twitter.svg" alt=""></div>
+                                <div class="sa-img"><img src="./img/facebook.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -661,25 +668,35 @@
 
 
     <script>
-        window.onload = function(){
+        window.onload = function () {
             // alert("working")
             var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
             // console.log(currentUser,"currentUser");
-            if(!!currentUser){
+            if (!!currentUser) {
                 // alert(currentUser.namee)
+                var logoutDiv = document.getElementById("logout");
                 var divFromHtml = document.getElementById("switch");
                 // console.log(divFromHtml,"divFromHtml");
                 // var h1 = document.createElement("h1");
                 // h1.innerText = "madhuri"
                 // divFromHtml.append(h1)
+                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <button onclick="logout() ">Logout</button>'
                 var name = `<p> ${currentUser.namee}</p>`;
                 divFromHtml.innerHTML = name;
-            }else{
-                alert("current user absent")
+                logoutDiv.innerHTML = button;
             }
+            // else{
+            //     alert("current user absent")
+            // }
         }
+        function logout() {
+            alert("We will miss you..")
+            localStorage.removeItem("tanishqCurrentUser");
+            window.location.reload();
+        }
+
     </script>
-    
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Nunito Sans, sans-serif !important;
+    font-family: Nunito Sans, sans-serif;
 }
 
 html {
@@ -154,6 +154,27 @@ a {
     font-weight: 600;
 }
 
+#logout button{
+    background-color: #F2E9E9;
+    color: #832729;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#logout button:hover{
+    font-weight: 600;
+}
+#logout i{
+    font-size: 1.6rem;
+    color: #832729;
+    margin-bottom: .8rem
+    ;
+}
+
+
+
 .nav-categories {
     width: 100%;
     padding: 1.2rem;
@@ -186,6 +207,8 @@ a {
 .nav-category-container li a:hover {
     border-bottom: .2rem solid #832729;
 }
+
+
 
 /* -------------slider--------- */
 
@@ -463,6 +486,7 @@ a {
     font-weight: 100;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 a:hover .sbc-explorer{
     width: 90%;
@@ -565,6 +589,7 @@ a:hover .sbc-explorer{
     margin: auto;
     /* border: 1px solid salmon; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -1150,6 +1175,8 @@ a:hover .sbc-explorer{
 .footer-payment-image>img {
     width: 100%;
     height: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
 .footer-last-right-div {
@@ -1168,8 +1195,8 @@ a:hover .sbc-explorer{
 .nav-subcategory {
     width: 100%;
     border-top: 1px solid lightgray;
-    position: sticky;
-    top: 6.6rem;
+    /* position: sticky; */
+    /* top: 6.6rem; */
     background-color: white;
     box-shadow: 0 .4rem .8rem 0 rgba(131, 39, 41, 0.2), 0 .6rem 2rem 0 rgba(131, 39, 41, .19);
     padding: .8rem;
@@ -1233,12 +1260,13 @@ a:hover .sbc-explorer{
 }
 
 .nav-s-img {
-    width: 5%;
+    width: 10%;
     margin-right: .4rem;
+    /* border: 1px solid black; */
 }
 
-.nav-s-img {
-    width: 7%;
+.nav-s-img img {
+    width: 100%;
 }
 
 .nav-s-text {
@@ -1338,7 +1366,44 @@ a:hover .sbc-explorer{
     margin-bottom: 4rem;
     /* border: 1px solid black; */
 }
+.mul-products-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    /* border: 1px solid palevioletred; */
+}
 
+.mul-products-wrapper a {
+    width: 24%;
+    border: 1px solid lightgray;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+.mul-products-wrapper a:hover {
+    box-shadow: 0 .4rem .8rem 0 rgba(131, 39, 41, 0.2), 0 .6rem 2rem 0 rgba(131, 39, 41, .19);
+
+}
+.g-pro-name{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    padding: 0 .7rem;
+    color: black;
+}
+.g-pro-price{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding: 0 .7rem;
+    color: black;
+}
+#products a img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
 .products {
     width: 100%;
 }
@@ -1353,7 +1418,7 @@ a:hover .sbc-explorer{
 
 .product-info {
     width: 100%;
-    padding: .5rem;
+    padding: 1rem;
 
 }
 
@@ -1753,16 +1818,19 @@ a:hover .sbc-explorer{
 }
 
 .offerAndprice {
-    width: 50%;
+    width: 58%;
+    /* display: flex;
+    align-items: center;
+    gap: 1rem; */
     /* border: 1px solid black; */
 }
 
 .del-price {
-    width: 30%;
+    width: 40%;
     /* border: 1px solid violet; */
-    font-size: 1.6rem;
-    color: lightgray;
-    font-weight: 700;
+    font-size: 1.2rem;
+    color: gray;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
@@ -1778,12 +1846,12 @@ a:hover .sbc-explorer{
 }
 
 .rupee {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
 }
 
 .total-price {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
 }
 
@@ -1915,6 +1983,7 @@ a:hover .sbc-explorer{
     text-align: center;
     margin-right: 2rem;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 .sp-secondary-btn {
@@ -2245,10 +2314,10 @@ a:hover .sbc-explorer{
 }
 
 .p-r-btn {
-    /* width: 45%; */
+    width: 45%;
     color: white;
     font-size: 1.4rem;
-    padding: 1.2rem 4.5rem;
+    padding: 1.2rem 1rem;
     outline: none;
     border: none;
     background-color: #832729;
@@ -2300,6 +2369,7 @@ a:hover .sbc-explorer{
     margin: 1rem auto;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 .review-stars i {
@@ -2374,12 +2444,12 @@ a:hover .sbc-explorer{
     /* border: 1px solid black; */
 }
 
-.s-p-products-wrapper .product-info .hurry,
+/* .s-p-products-wrapper .product-info .hurry,
 .p-path,
 .explorer-btn {
     display: none;
 
-}
+} */
 .cart-bold{
     font-weight: bold;
     text-transform: capitalize;
@@ -2938,20 +3008,125 @@ input:checked{
     cursor: pointer;
 }
 
+/* ------Success Page------------- */
+
+.success-bg{
+    width: 100%;
+    padding-top: 65.7rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/north-indian-jewellery-sets-1024x768.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+.success-msg-container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 60%;
+    /* margin: 6rem auto; */
+    color: white;
+}
+.success-msg-title{
+    font-size: 4rem;
+    font-weight: 600;
+    /* text-transform: capitalize; */
+    margin-bottom: 1rem;
+
+}
+.succes-msg-content{
+    font-size: 2rem;
+    line-height: 3.3rem;
+
+}
+.succes-msg-content span{
+    font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.success-msg-last-text{
+    font-size: 3rem;
+    /* margin-top: 1rem; */
+    margin-bottom: 4rem;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: .1rem;
+}
+.success-order-continue-shopping-btn{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: .5rem;
+    color: #832729;
+    text-align: center;
+    background-color: rgb(242, 233, 233);
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    
+
+}
 
 
+/* -------Add product ------------- */
+.admin-panel-navbar{
+    width: 100%;
+    padding: 1rem 4rem;
+    /* border: 1px solid black; */
+    background-color: #F6E3E1;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-top-menu-wrapper {
+    width: 40%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-top-menu-wrapper .menu-img img{
+    width: 70%;
+}
+.add-product-container{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.add-product-container form{
+    width: 50%;
+    padding: 3rem;
+    /* border: 1px solid black; */
+    margin: 4rem auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.admin-panel-title{
+    text-align: center;
+    font-size: 3rem;
+    color: #832729;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.submit-field{
+    width: 100%;
+    text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.admin-panel-btn{
+    width: 30%;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+    background-color: #832729;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.3rem 0;
+    outline: none;
+    cursor: pointer;
+}
 
 
 

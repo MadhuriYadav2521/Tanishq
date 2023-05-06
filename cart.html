@@ -57,7 +57,7 @@
                                 <div class="menu-img">
                                     <img src="./img/user.svg" alt="">
                                 </div>
-                                <div class="menu-title">account</div>
+                                <div class="menu-title" id="switch">account</div>
                             </a>
                         </div>
                         <div class="menu">
@@ -69,12 +69,15 @@
                             </a>
                         </div>
                         <div class="menu">
-                            <a href="">
+                            <a href="./cart.html">
                                 <div class="menu-img">
                                     <img src="./img/cart.svg" alt="">
                                 </div>
                                 <div class="menu-title">cart</div>
                             </a>
+                        </div>
+                        <div class="menu" id="logout">
+                            
                         </div>
                     </div>
                 </div>
@@ -256,8 +259,8 @@
                     </ul>
                 </div>
                 <div class="checkout-section">
-                   <a href=""><button class="continue-shopping-btn">Continue Shopping</button></a>
-                    <a href="./"><button class="checkout-btn">Proceed to Checkout</button></a>
+                   <a href="./index.html"><button class="continue-shopping-btn">Continue Shopping</button></a>
+                    <a href="./successPage.html"><button class="checkout-btn">Proceed to Checkout</button></a>
                 </div>
             </div>
         </div>
@@ -369,6 +372,39 @@
 
         </footer>
     </div>
+
+
+    
+    <script>
+        window.onload = function(){
+            // alert("working")
+            var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
+            // console.log(currentUser,"currentUser");
+            if(!!currentUser){
+                // alert(currentUser.namee)
+                var logoutDiv = document.getElementById("logout");
+                var divFromHtml = document.getElementById("switch");
+                // console.log(divFromHtml,"divFromHtml");
+                // var h1 = document.createElement("h1");
+                // h1.innerText = "madhuri"
+                // divFromHtml.append(h1)
+                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <button onclick="logout() ">Logout</button>'
+                var name = `<p> ${currentUser.namee}</p>`;
+                divFromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
+            }
+            // else{
+            //     alert("current user absent")
+            // }
+        }
+        function logout() {
+            alert("We will miss you..")
+            localStorage.removeItem("tanishqCurrentUser");
+            window.location.reload();
+        }
+        
+    </script>
+   
 </body>
 
 </html>
