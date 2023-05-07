@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dynamic-cart</title>
 </head>
-
 <body>
     <h1>your cart</h1>
 
     <div id="products"></div>
 
-    <a href="./successPage.html" style="text-decoration: none; color: black;">Checkout</a>
+
     <script>
-        window.onload = function () {
+        window.onload =function(){
             var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
             var userData = JSON.parse(localStorage.getItem("tanishqUsers"))
             var divToAppendProducts = document.getElementById("products")
             var products;
-            for (var i = 0; i < userData.length; i++) {
-                if (currentUser.useremail == userData[i].useremail) {
+            for(var i=0; i<userData.length; i++){
+                if(currentUser.useremail == userData[i].useremail){
                     products = userData[i].cartProducts;
                 }
             }
             // console.log(products,"products here");
             var finalData = "";
-            for (var i = 0; i < products.length; i++) {
+            for(var i=0; i<products.length; i++){
                 finalData += `<div> <img src='${products[i].proImage}'/><br/>
                             <h2>${products[i].proName}</h2><br/>
-                            <h3>${products[i].proPrice}</h3>`
+                            <h3>${product.proPrice}</h3>`
             }
             divToAppendProducts.innerHTML = finalData;
         }
