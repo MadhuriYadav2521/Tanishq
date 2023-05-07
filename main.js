@@ -96,9 +96,9 @@ function addProduct(event) {
     var proImage = document.getElementById("pimage").value;
     var product = { proName, proPrice, proImage };
 
-    var LS = JSON.parse(localStorage.getItem("Products")) || [];
+    var LS = JSON.parse(localStorage.getItem("tanishqProductsList")) || [];
     LS.push(product);
-    localStorage.setItem("Products", JSON.stringify(LS));
+    localStorage.setItem("tanishqProductsList", JSON.stringify(LS));
 
     alert("Product Added Successfully.")
     document.getElementById("pname").value = "";
