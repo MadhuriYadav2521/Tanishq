@@ -199,8 +199,8 @@
                         </div>
                         <div class="offer-txt">gold purity : 14 karat</div>
                         <div class="p-related-text">Not sure What ti buy? Checkout our <span>Buying Guides</span></div>
-                        <div class="sp-buttons" >
-                            <div id="forAddToCart"></div>
+                        <div class="sp-buttons" id="forAddToCart" >
+                            
                             <a class="sp-secondary-btn">buy now</a>
                         </div>
                         <hr>
@@ -622,7 +622,11 @@
 
         var productName = `<div> ${product.proName}</div>`                
         var productPrice = `<span> ${product.proPrice}</span>`                
-        var addToCart = `<button onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</button>`                
+        var addToCart = ` <div class="sp-buttons" id="forAddToCart" >
+            <button onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</button>
+                            <a class="sp-secondary-btn">buy now</a>
+                        </div>`
+                        
         console.log(structure, "here");
         divToAppendProduct.innerHTML = structure;
         divToAppendProductName.innerHTML = productName;
