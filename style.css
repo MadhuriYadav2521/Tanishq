@@ -1421,7 +1421,10 @@ a:hover .sbc-explorer{
     padding: 1rem;
 
 }
-
+.product-info .p-name{
+    height: 3.5rem;
+    /* border: .1rem solid salmon; */
+}
 .hurry {
     width: 100%;
     margin: .5rem;
@@ -1435,7 +1438,7 @@ a:hover .sbc-explorer{
     font-size: 1.4rem;
     font-weight: 600;
     color: black;
-    margin-bottom: .8rem;
+    margin-bottom: 1rem;
 }
 
 .p-price {

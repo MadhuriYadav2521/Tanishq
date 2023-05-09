@@ -289,6 +289,14 @@
         width: 50%;
     }
 }
+@media screen and (max-width: 985px) {
+    .products-container {
+        width: 95%;
+        margin: 2rem auto;
+        /* border: 1px solid purple; */
+    }
+    
+}
 
 @media screen and (max-width:920px) {
     html {

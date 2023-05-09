@@ -155,9 +155,21 @@
                 <button class="function-btn" disabled><i class="fa-solid fa-repeat"></i>Compare</button>
                 <button class="function-btn">sort by: best sellers<i class="fa-solid fa-angle-down"></i></button>
             </div>
-            <div class="mul-products-wrapper " id="products">
+            <div class="mul-products-wrapper " id="productContainer">
+                <a>
+                    <div class="products">
+                        <div class="product-image" id="productImg">
 
-                <a> </a>
+                        </div>
+                        <div class="product-info">
+                            <div class="hurry">only 1 left in stock</div>
+                            <div class="p-name" id="productName"></div>
+                            <div class="p-price" id="productPrice"></div>
+                            <div class="p-path">women | earings</div>
+                            <button class="explorer-btn">explore now</button>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -303,19 +315,47 @@
             }
 
 
-            var divToShowProducts = document.getElementById("products");
-            var finalData = "";
+            // var divToShowProducts = document.getElementById("products");
+            var divToShowProductImg = document.getElementById("productImg");
+            var divToShowProductName = document.getElementById("productName");
+            var divToShowProductPrice = document.getElementById("productPrice");
+            var divToShowAllProduct = document.getElementById("productContainer");
+            
+            // var finalData = "";
+            var finalImg = "";
+            var finalName = "";
+            var finalPrice = "";
+            var finalContainer = "";
 
             var productsFromLS = JSON.parse(localStorage.getItem("tanishqProductsList"))
             for (var i = 0; i < productsFromLS.length; i++) {
-                finalData += `<a onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
-                            <img src=${productsFromLS[i].proImage} /><div class="g-pro-name">${productsFromLS[i].proName}</div>
-                            <div class="g-pro-price">₹ ${productsFromLS[i].proPrice}</div></a>`;
+                // finalData += `<a onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
+                //             <img src=${productsFromLS[i].proImage} /><div class="g-pro-name">${productsFromLS[i].proName}</div>
+                //             <div class="g-pro-price">₹ ${productsFromLS[i].proPrice}</div></a>`;
+
+                finalContainer += ` <a>
+                    <div class="products">
+                        <div class="product-image">
+                            <img src=${productsFromLS[i].proImage} />
+                        </div>
+                        <div class="product-info">
+                            <div class="hurry">only 1 left in stock</div>
+                            <div class="p-name">${productsFromLS[i].proName}</div>
+                            <div class="p-price">₹ ${productsFromLS[i].proPrice}</div>
+                            <div class="p-path">women | earings</div>
+                            <button class="explorer-btn" onclick='redirect(${JSON.stringify(productsFromLS[i])})'>explore now</button>
+                        </div>
+                    </div>
+                </a>`
             }
 
             // console.log(finalData, "finalData here")
 
-            divToShowProducts.innerHTML = finalData;
+            // divToShowProducts.innerHTML = finalData;
+            divToShowProductImg.innerHTML = finalImg;
+            divToShowProductName.innerHTML = finalName;
+            divToShowProductPrice.innerHTML = finalPrice;
+            divToShowAllProduct.innerHTML = finalContainer;
 
 
         }
