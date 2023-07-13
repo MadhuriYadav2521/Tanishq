@@ -321,18 +321,12 @@
             var divToShowProductPrice = document.getElementById("productPrice");
             var divToShowAllProduct = document.getElementById("productContainer");
             
-            // var finalData = "";
-            var finalImg = "";
-            var finalName = "";
-            var finalPrice = "";
+            
             var finalContainer = "";
 
             var productsFromLS = JSON.parse(localStorage.getItem("tanishqProductsList"))
             for (var i = 0; i < productsFromLS.length; i++) {
-                // finalData += `<a onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
-                //             <img src=${productsFromLS[i].proImage} /><div class="g-pro-name">${productsFromLS[i].proName}</div>
-                //             <div class="g-pro-price">₹ ${productsFromLS[i].proPrice}</div></a>`;
-
+                
                 finalContainer += ` <a>
                     <div class="products">
                         <div class="product-image">
@@ -349,12 +343,6 @@
                 </a>`
             }
 
-            // console.log(finalData, "finalData here")
-
-            // divToShowProducts.innerHTML = finalData;
-            divToShowProductImg.innerHTML = finalImg;
-            divToShowProductName.innerHTML = finalName;
-            divToShowProductPrice.innerHTML = finalPrice;
             divToShowAllProduct.innerHTML = finalContainer;
 
 

@@ -193,11 +193,11 @@
                                 <div class="os-title">order summmary</div>
                                 <div class="billing-content">
                                     <div class="biil-left">sub total</div>
-                                    <div class="bill-right">129260</div>
+                                    <div class="bill-right" id="totalPrice">129260</div>
                                 </div>
                                 <div class="billing-content">
                                     <div class="biil-left">discount</div>
-                                    <div class="bill-right">-5765</div>
+                                    <div class="bill-right" id="discount">-5765</div>
                                 </div>
                                 <div class="billing-content">
                                     <div class="biil-left">delivery charges</div>
@@ -205,11 +205,11 @@
                                 </div>
                                 <div class="billing-content">
                                     <div class="biil-left">total</div>
-                                    <div class="bill-right">123521</div>
+                                    <div class="bill-right" id="finalPrice">123521</div>
                                 </div>
                                 <div class="billing-content">
                                     <div class="biil-left">you save</div>
-                                    <div class="bill-right">5436</div>
+                                    <div class="bill-right">2000</div>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                     <ul>
                         <li>Total</li>
                         <li>(<span>1</span>item ):</li>
-                        <li class="bold-price-text">₹ <span>20460</span></li>
+                        <li class="bold-price-text">₹ <span id="ffTotal">20460</span></li>
                     </ul>
                 </div>
                 <div class="checkout-section">
@@ -368,6 +368,11 @@
             var divToAppendProductName = document.getElementById("productName")
             var divToAppendProductPrice = document.getElementById("productPrice")
             var divToAppendAllProducts = document.getElementById("finalcart")
+            // var divToShowCount = document.getElementById("count");
+            var divToShowDiscount = document.getElementById("discount");
+            var divToShowTotalPrice = document.getElementById("totalPrice");
+            var divToShowFinalPrice = document.getElementById("finalPrice");
+            var divToShowFFTotal = document.getElementById("ffTotal");
 
             var products;
             for (var i = 0; i < userData.length; i++) {
@@ -383,15 +388,11 @@
             var finalProductPrice = "";
             var finalProductCart  = "";
 
+            var count = 0;
+            var sumArray = [];
+
+
             for (var i = 0; i < products.length; i++) {
-
-                // finalData += `<div> <img src='${products[i].proImage}'/><br/>
-                //             <h2>${products[i].proName}</h2><br/>
-                //             <h3>${products[i].proPrice}</h3>`
-
-                    // finalProductImage += `<div> <img src='${products[i].proImage}'/></div>`;
-                    // finalProductName += `${products[i].proName}`;
-                    // finalProductPrice += `₹${products[i].proPrice}`;
 
                     finalProductCart += ` <div class="cart-products">
                             <div class="cart-product-img" id="productImage">
@@ -426,13 +427,34 @@
                             </div>
                         </div>`
 
+                        count++
+                            sumArray.push(products[i].proPrice)
+
             }
+
+            var sum = 0;
+            console.log(count);
+            console.log(sumArray);
+            for(var i=0; i<sumArray.length; i++){
+                sum = sum + parseInt(sumArray[i])
+                
+            }
+            var discount = 2000
+            console.log(sum);
+            var finalPrice = sum - discount;
+            console.log(finalPrice);
+
             // divToAppendProducts.innerHTML = finalData;
 
             divToAppendProductImage.innerHTML = finalProductImage;
             divToAppendProductName.innerHTML = finalProductName;
             divToAppendProductPrice.innerHTML = finalProductPrice;
             divToAppendAllProducts.innerHTML = finalProductCart;
+            // divToShowCount.innerHTML = count;
+            divToShowDiscount.innerHTML =` - ${discount}`
+            divToShowTotalPrice.innerHTML =` ₹ ${sum}`
+            divToShowFinalPrice.innerHTML = ` ₹ ${finalPrice}`
+            divToShowFFTotal.innerHTML = `${finalPrice}`
         }
         function logout() {
             alert("We will miss you..")
